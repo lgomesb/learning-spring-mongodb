@@ -1,0 +1,29 @@
+version: "3"
+
+services: 
+    customer-maintainer:
+        build: 
+            context: .
+        container_name: customer-maintainer
+        ports: 
+            - "8090:8080"
+        networks: 
+            - frontend
+            - backend
+
+    mongo:
+        image: mongo:latest 
+        container_name: mongo             
+        networks: 
+            - backend
+        environment: 
+            - "MONGO_INITDB_ROOT_USERNAME=admin"
+            - "MONGO_INITDB_ROOT_PASSWORD="
+        volumes: 
+            - /volumes/mongo:/data/db
+            
+networks: 
+    frontend:        
+        driver: bridge
+    backend:
+        driver: bridge
