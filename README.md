@@ -1,4 +1,4 @@
-# Exemplo de implementação de Spring Boot com Mongodb
+# Exemplo de implementação de Microserviço em Spring Boot com Mongodb
 ## Nesse projeto também contém as implementações abaixo: 
 * Acesso remoto ao Mongodb
 * Definição do arquivo *Dockerfile* para geração da imagem da aplicação
