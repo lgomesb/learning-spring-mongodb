@@ -1,8 +1,11 @@
 package br.com.learning.customermaintainer.domain;
 
+import java.time.LocalDate;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import br.com.learning.customermaintainer.dto.CustomerDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -19,6 +22,12 @@ public class Customer {
 
 	@Id
 	private String id;
-	private String name;	
-	
+	private String name;
+	private String document;
+	private LocalDate recordDate;
+
+	public Customer(CustomerDTO dto) {
+		this.name = dto.getName();
+		this.document = dto.getDocument();
+	}
 }
