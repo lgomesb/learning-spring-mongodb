@@ -18,7 +18,7 @@ services:
             - backend
         environment: 
             - "MONGO_INITDB_ROOT_USERNAME=admin"
-            - "MONGO_INITDB_ROOT_PASSWORD="
+            - "MONGO_INITDB_ROOT_PASSWORD=123456"
         volumes: 
             - /volumes/mongo:/data/db
             
@@ -26,4 +26,4 @@ networks:
     frontend:        
         driver: bridge
     backend:
-        driver: bridge
+      
